@@ -13,7 +13,7 @@ function Sumar(){
   numero++;
   document.getElementById("numero_contador").innerHTML=numero;
 
-  numero < 100 ? "":alert("Felicidades haz clickeado 100 veces !");
+  numero == 100 ? "":alert("Felicidades haz clickeado 100 veces !");
   
 }
 
