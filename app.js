@@ -18,7 +18,7 @@ const cards = document.querySelectorAll(".cards div");
 
 cards.forEach((x,index_song)=>{
 
-  let song = new Audio(`/assets/songs/cards/song${index_song+1}.mp3`);
+  let song = new Audio(`assets/songs/cards/song${index_song+1}.mp3`);
 
   x.addEventListener("mouseenter",()=>song.play());
 
@@ -32,7 +32,7 @@ cards.forEach((x,index_song)=>{
 });
 
 function Sumar(){
-  let song = new Audio("/assets/songs/song.mp3")
+  let song = new Audio("assets/songs/song.mp3")
 
   let parrafo = document.getElementById("numero_contador");
   let numero = parseInt(parrafo.textContent);
