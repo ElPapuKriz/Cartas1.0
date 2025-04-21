@@ -1,10 +1,19 @@
-let Producto_seleccionado =document.querySelector(".lista");
+const Lista = ["1","2","3"];
 
-Producto_seleccionado.addEventListener("click",()=>{
-
-alert("Haz presionado en este elemento.");
-
+document.querySelectorAll(".lista li").forEach((li,index)=>{
+  
+  li.addEventListener("click",() => {alert("Haz clickeado el elemento "+Lista[index]);
+  
+  });
 });
+
+
+/*document.querySelector(".lista li:nth-child(1)").addEventListener("click",()=>{
+
+  alert("Haz clickeado el elemento 1");
+
+});*/
+
 
 function Sumar(){
 
