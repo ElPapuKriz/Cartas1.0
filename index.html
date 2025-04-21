@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+    <!DOCTYPE html>
+<html lang="es">  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +12,30 @@
     <h1 class="titulo">Cartas ♣♠♦♥</h1>
   </header>
 
-  <ul class="lista">
-    <li>Primer item</li>
-    <li>Segundo item</li>
-    <li>Tercer item</li>
-  </ul>
+  <div class="medio">
+    <ul class="lista">
+      <li >Primer item</li>
+      <li>Segundo item</li>
+      <li>Tercer item</li>
+    </ul>
 
-  <div class="contador">
+    <div class="contador">
 
-    <p class="numero_contador" id="numero_contador">0</p>
+      <p class="numero_contador" id="numero_contador">0</p>
 
-    <button type="button" onclick="Sumar()">Hazme click!</button>
-    <button type="button" onclick="Reset()">Reset</button>
+      <button type="button" onclick="Sumar()">Hazme click!</button>
+      <button type="button" onclick="Reset()">Reset</button>
 
+    </div>
+
+    <div class="cards">
+
+      <div class="card1"></div>
+      <div class="card2"></div>
+      <div class="card3"></div>
+
+    </div>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
