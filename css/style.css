@@ -1,0 +1,74 @@
+*,body{
+
+  margin: 0px;
+
+}
+
+body{
+
+  background-color: rgb(43, 160, 72);
+
+}
+
+header{
+
+  text-align: center;
+  color:gold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  padding: 30px;
+
+}
+
+.lista{
+
+  list-style: none;
+  padding: 25px 50px 0px 50px;
+  
+}
+
+.lista li{
+
+  background-color: rgb(0, 0, 0);
+  color: gold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border:1px solid rgb(255, 255, 255);
+  padding: 15px 10px;
+  cursor: pointer;
+
+}
+
+.lista li:hover{
+
+  transform: translateX(-20px);
+  background-color: rgb(235, 248, 117);
+  color:black;
+
+}
+
+.contador{
+
+  padding: 25px 50px 0px 50px ;
+  text-align: center;
+
+}
+
+.numero_contador{
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 800;
+  padding: 25px 0px 30px ;
+
+}
+
+button{
+
+background-color: black;
+color: gold;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight:700;
+border-radius: 20px;
+padding: 8px;
+cursor: pointer;
+
+}
