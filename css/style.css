@@ -7,7 +7,8 @@
 body{
 
   background-color: rgb(43, 160, 72);
-
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 header{
@@ -35,6 +36,7 @@ header{
   border:1px solid rgb(255, 255, 255);
   padding: 15px 10px;
   cursor: pointer;
+  transition: 0.2s;
 
 }
 
@@ -70,5 +72,82 @@ font-weight:700;
 border-radius: 20px;
 padding: 8px;
 cursor: pointer;
+
+}
+
+.cards {
+  display: grid;
+  /* siempre 3 columnas */
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 8%;
+  margin-right: 8%;
+  background-color: rgb(12, 97, 26);
+  border-radius: 5px;
+  padding-left: 12%;
+  padding-right: 12%;
+
+
+  
+}
+
+.card1, .card2, .card3 {
+  background-color: rgba(252, 249, 96, 0.8);
+  width: 100px;
+  min-width: 100px;
+  height: 180px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* centrado de contenido interno, opcional */
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+
+  position: relative;
+  
+}
+
+.card1:hover,.card2:hover,.card3:hover{
+
+  transform:translateY(-60px) ;
+  background-color: rgb(165, 64, 64);
+  transition:0.3s;
+  box-shadow: 1px 30px 7px 5px rgba(56, 37, 15, 0.8);
+  
+}
+
+/* alineación en escritorio (sigue funcionando igual) */
+.card1 { justify-self:center;   }
+.card2 { justify-self:center;  }
+.card3 { justify-self:center;     }
+
+@media (max-width: 768px) {
+
+  body{
+
+    background-color: rgb(43, 160, 72);
+    padding-left: 0%;
+    padding-right: 0%;;
+
+  }
+  .cards {
+    display: grid;
+    /* siempre 3 columnas */
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(12, 97, 26);
+    border-radius: 5px;
+  
+  
+    /* si no caben, permitimos scroll horizontal */
+    overflow-x: auto;
+  }
 
 }
