@@ -136,13 +136,13 @@ cursor: pointer;
     display: grid;
     /* siempre 3 columnas */
     grid-template-columns: repeat(3, minmax(100px, 1fr));
-    gap:2%;
-    padding: 20px;
     margin-top: 100px;
     margin-left: 4%;
     margin-right: 4%;
     background-color: rgb(12, 97, 26);
     border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
     
   }
 
@@ -152,8 +152,8 @@ cursor: pointer;
   height: 180px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left:15%;
-  margin-right:19%;
+  margin-left:1%;
+  margin-right:1%;
   
   /* centrado de contenido interno, opcional */
   display: flex;
