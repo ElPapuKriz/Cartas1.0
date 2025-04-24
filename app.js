@@ -4,16 +4,9 @@
 
 });*/
 
-const Lista = ["1","2","3"];
-
-document.querySelectorAll(".lista li").forEach((li,index)=>{
-  
-  li.addEventListener("click",() => {alert("Haz clickeado el elemento "+Lista[index]);
-  
-  });
-});
 
 
+/*
 const cards = document.querySelectorAll(".cards div");
 
 cards.forEach((x,index_song)=>{
@@ -30,6 +23,90 @@ cards.forEach((x,index_song)=>{
   });
 
 });
+*/
+function getNumeroRandom(min,max){
+
+  return Math.floor(Math.random()*(max-(min-1)))+min;
+
+}
+
+document.querySelectorAll(".lista li").forEach(li=>{
+
+  li.addEventListener("click",() => {
+    
+    let num = getNumeroRandom(1,5);
+    let song = new Audio(`assets/songs/list/song${num}.mp3`);
+
+    song.play();
+  });
+});
+
+const cartas = document.querySelectorAll(".cards div");
+
+function iniciar(){
+
+  cartas.forEach((contenido,indice)=>{
+
+    
+
+    contenido.addEventListener("click",()=>{
+      let song = new Audio("assets/songs/cards/song1.mp3");
+      song.play();
+        
+        alert("El numero de carta es : "+(contenido.dataset.valor || indice+1));
+      });
+    
+    });
+
+}
+
+iniciar();
+
+
+function getNumerosUnicos(cuantos,min, max) {
+
+  const lista =[];
+
+  for (let i = min; i <= max; i++) lista.push(i);
+
+  for(let i =lista.length-1;i>0;i--){
+
+  const j=Math.floor(Math.random() * (i+1));
+
+  [lista[i],lista[j]] = [lista[j],lista[i]];
+
+  }
+
+  return lista.splice(0,cuantos);
+
+}
+
+function barajear(){
+  const sonido = new Audio("assets/songs/button/barajear.mp3");
+
+  sonido.play();
+
+  cartas.forEach(carta => {
+    carta.classList.add('barajando');
+
+    carta.addEventListener(
+      'animationend',
+      () => carta.classList.remove('barajando'),
+      { once: true }
+    );
+  });
+
+ const lista = getNumerosUnicos(3,1,3);
+
+ cartas.forEach((contenido,index) =>{
+
+  contenido.dataset.valor = lista[index];
+
+ });
+
+  
+}
+
 
 function Sumar(){
   let song = new Audio("assets/songs/song.mp3")
@@ -52,3 +129,10 @@ function Reset(){
   document.getElementById("numero_contador").innerHTML="0";
 
 }
+
+
+
+
+
+
+
